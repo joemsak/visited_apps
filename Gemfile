@@ -1,22 +1,26 @@
 ruby '2.1.5'
 #ruby-gemset=visited_apps
 source 'https://rubygems.org'
-gem 'rails', '4.1.8'
-gem 'pg'
+
+gem 'rails', '~> 4.1'
+gem 'pg', '~> 0.17'
+gem 'devise', '~> 3.4'
+
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
+
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
-
 
 gem "underscore-rails", "~> 1.7"
 gem "foundation-rails", "~> 5.3"
 gem "friendly_id", "~> 5.0"
 gem "draper", "~> 1.3"
+
 group :test do
   gem "pry-rails", "~> 0.3"
   gem "pry-nav", "~> 0.2"
