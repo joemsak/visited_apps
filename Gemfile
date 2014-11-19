@@ -31,7 +31,6 @@ group :test do
   gem "factory_girl_rails", "~> 4.4"
   gem "poltergeist", "~> 1.5"
   gem "konacha", "~> 3.2"
-  gem "guard-konacha", "~> 1.0"
   gem "spring-commands-rspec", "~> 1.0"
 end
 
