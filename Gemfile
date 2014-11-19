@@ -32,6 +32,7 @@ group :test do
   gem "poltergeist", "~> 1.5"
   gem "konacha", "~> 3.2"
   gem "spring-commands-rspec", "~> 1.0"
+  gem 'shoulda-matchers', '~> 2.7'
 end
 
 group :test, :development do
