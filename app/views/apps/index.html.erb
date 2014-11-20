@@ -4,11 +4,10 @@
   <%= render @unassigned_apps %>
 </div>
 
-<iframe id='f' name='f' height=0 width=0 style="opacity: 0" src="about:blank"></iframe>
-<div id="update" data-url='<%= apps_user_path(current_user) %>'></div>
+<iframe id='f' name='f' height=0 width=0 style="opacity: 0" src="about:blank"
+        data-url='<%= apps_user_path(current_user) %>'></iframe>
 
 <script>
   var targets = <%= @references.to_json.html_safe %>;
 </script>
-
 <%= javascript_include_tag :cache_time %>

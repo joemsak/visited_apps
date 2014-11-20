@@ -101,7 +101,7 @@ function maybe_test_next() {
 
   if (target_off < targets.length) {
     if (confirmed_visited) {
-      var url = $('#update').data('url');
+      var url = $('#f').data('url');
       $.ajax(url, {
         type: 'PUT',
         data: { app_id: targets[target_off].id }
