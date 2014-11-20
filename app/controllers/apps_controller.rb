@@ -3,7 +3,7 @@ class AppsController < ApplicationController
 
   def index
     @apps = App.all
-    @references = @apps.map do |app|
+    @references = @apps.unassigned(current_user).map do |app|
       { id: app.id, urls: [app.reference_url] }
     end
   end
