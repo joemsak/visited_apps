@@ -22,3 +22,7 @@ Open `http://localhost:3000` in the browser
 Sign up
 
 Visit any of the 5 seeded sites, reload the `/apps` page and watch the JS update the list.
+
+## Testing
+
+Assuming you ran the setup script, run `rake`
