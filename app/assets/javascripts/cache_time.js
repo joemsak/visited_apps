@@ -9,7 +9,6 @@ var MAX_ATTEMPTS = 1;
  * MAIN STATE MACHINE *
  **********************/
 
-var log_area;
 
 var target_off = 0;
 var attempt = 0;
@@ -93,17 +92,6 @@ function wait_for_noread() {
   }
 }
 
-/* Just a logging helper. */
-function log_text(str, type, cssclass) {
-  var el = document.createElement(type);
-  var tx = document.createTextNode(str);
-
-  el.className = cssclass;
-  el.appendChild(tx);
-
-  log_area.appendChild(el);
-}
-
 /* Decides what to do next. May schedule another attempt for the same target,
    select a new target, or wrap up the scan. */
 function maybe_test_next() {
@@ -113,13 +101,14 @@ function maybe_test_next() {
 
   if (target_off < targets.length) {
     if (confirmed_visited) {
-      log_text('Visited: ' + targets[target_off].id + ' [' + cycles + ':' + attempt + ']', 'li', 'visited');
+      var url = $('#update').data('url');
+      $.ajax(url, {
+        type: 'PUT',
+        data: { app_ids: [targets[target_off].id] }
+      });
     }
 
     if (confirmed_visited || attempt == MAX_ATTEMPTS * targets[target_off].urls.length) {
-      if (!confirmed_visited)
-        log_text('Not visited: ' + targets[target_off].id + ' [' + cycles + '+]', 'li', 'not_visited');
-
       confirmed_visited = false;
       target_off++;
       attempt = 0;
@@ -132,10 +121,6 @@ function maybe_test_next() {
 
       perform_check();
     }
-  } else {
-    en = (new Date()).getTime();
-
-    document.getElementById('status').innerHTML = 'Tested ' + urls + ' individual URLs in ' + (en - st) + ' ms.';
   }
 }
 
@@ -146,10 +131,6 @@ function start_stuff() {
   attempt = 0;
   confirmed_visited = false;
 
-  log_area = document.getElementById('log');
-  log_area.innerHTML = '';
-
-  st = (new Date()).getTime();
   urls = 0;
 
   maybe_test_next();
