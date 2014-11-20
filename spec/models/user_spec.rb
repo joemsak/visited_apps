@@ -24,4 +24,17 @@ RSpec.describe User do
       expect(user.reload.apps).to match_array([app])
     end
   end
+
+  describe '#has_app?' do
+    it 'returns true / false depending on the association' do
+      app = create(:app)
+      app2 = create(:app)
+
+      user = create(:user)
+      user.add_app(app.id)
+
+      expect(user).to have_app(app)
+      expect(user).not_to have_app(app2)
+    end
+  end
 end

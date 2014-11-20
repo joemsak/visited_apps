@@ -1,7 +1,9 @@
 <%= div_for app do %>
-  <% if current_user.apps.include?(app) %>
-    <h2><%= icon 'check', app.name, class: 'green' %></h2>
-  <% else %>
-    <h3><%= app.name %></h3>
-  <% end %>
+  <h3>
+    <% if current_user.has_app?(app) %>
+      <%= icon 'check', app.name, class: 'green' %>
+    <% else %>
+      <%= app.name %>
+    <% end %>
+  </h3>
 <% end %>

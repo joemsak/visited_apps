@@ -11,6 +11,10 @@ class User < ActiveRecord::Base
     apps << App.find(app_id)
   end
 
+  def has_app?(app)
+    apps.include?(app)
+  end
+
   def self.add_app(user_id, app_id)
     User.find(user_id).add_app(app_id)
   end
