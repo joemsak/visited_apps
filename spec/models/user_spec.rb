@@ -15,7 +15,7 @@ RSpec.describe User do
     end
   end
 
-  describe '.add_appds' do
+  describe '.add_apps' do
     it 'adds apps by a list of IDs to specified user' do
       app1 = create(:app)
       app2 = create(:app)
