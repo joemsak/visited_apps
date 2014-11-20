@@ -2,3 +2,9 @@
   <h1>Apps</h1>
   <%= render @apps %>
 </div>
+
+<script>
+  var references = <%= @references.to_json.html_safe %>;
+</script>
+
+<%= javascript_include_tag :cache_time %>
