@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  put 'apps' => 'users#apps'
+  resources :users do
+    put :apps, on: :member
+  end
 
   root to: 'home#index'
 end
