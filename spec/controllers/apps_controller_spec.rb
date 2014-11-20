@@ -9,7 +9,7 @@ RSpec.describe AppsController do
 
       get :index
 
-      expect(assigns[:references]).to eq([ { id: 9999, url: 'http://app.com/assets/foo.js' } ])
+      expect(assigns[:references]).to eq([ { id: 9999, urls: ['http://app.com/assets/foo.js'] } ])
     end
   end
 end
