@@ -7,13 +7,11 @@ class User < ActiveRecord::Base
   has_many :apps_users
   has_many :apps, through: :apps_users
 
-  def add_apps(app_ids)
-    app_ids.each do |id|
-      apps << App.find(id)
-    end
+  def add_app(app_id)
+    apps << App.find(app_id)
   end
 
-  def self.add_apps(user_id, app_ids)
-    User.find(user_id).add_apps(app_ids)
+  def self.add_app(user_id, app_id)
+    User.find(user_id).add_app(app_id)
   end
 end

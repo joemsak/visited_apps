@@ -104,7 +104,7 @@ function maybe_test_next() {
       var url = $('#update').data('url');
       $.ajax(url, {
         type: 'PUT',
-        data: { app_ids: [targets[target_off].id] }
+        data: { app_id: targets[target_off].id }
       });
     }
 
