@@ -1,11 +1,17 @@
 <div id='apps'>
   <h1>Apps</h1>
-  <%= render @user_apps %>
-  <%= render @unassigned_apps %>
+
+  <div id="user_apps">
+    <%= render @user_apps %>
+  </div>
+
+  <div id="other_apps">
+    <%= render @unassigned_apps %>
+  </div>
 </div>
 
 <iframe id='f' name='f' height=0 width=0 style="opacity: 0" src="about:blank"
-        data-url='<%= apps_user_path(current_user) %>'></iframe>
+        data-url='<%= apps_path(format: :js) %>'></iframe>
 
 <script>
   var targets = <%= @references.to_json.html_safe %>;
