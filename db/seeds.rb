@@ -8,7 +8,7 @@
 
 App.create([
   { name: 'Facebook',
-    reference_url: 'https://s-static.ak.facebook.com/rsrc.php/v1/yX/r/HN0ehA1zox_.js' },
+    reference_url: 'https://fbstatic-a.akamaihd.net/rsrc.php/v2/yV/r/aXwjx2fqSf4.css' },
   { name: 'Google Plus',
     reference_url: 'https://ssl.gstatic.com/gb/js/abc/gcm_57b1882492d4d0138a0a7ea7240394ca.js' },
   { name: 'MySpace',
