@@ -12,9 +12,9 @@ App.create([
   { name: 'Google Plus',
     reference_url: 'https://ssl.gstatic.com/gb/js/abc/gcm_57b1882492d4d0138a0a7ea7240394ca.js' },
   { name: 'MySpace',
-    reference_url: 'http://x.myspacecdn.com/modules/common/static/css/futuraglobal_kqj36l0b.css' },
+    reference_url: 'https://x.myspacecdn.com/new/common/css/sprite.BBF12BA9520AC949E116469AF39D9231.min.css' },
   { name: 'Hulu',
-   reference_url: 'http://static.huluim.com/system/hulu_0cd8f497_1.css' },
+   reference_url: 'http://static.huluim.com/huluguru/fonts-f0256c577f48b8362cb10853ae225a12.css' },
  { name: 'Flickr',
-   reference_url: 'http://l.yimg.com/g/css/c_fold_main.css.v109886.64777.105425.23' }
+   reference_url: 'https://s.yimg.com/pw/combo/1/3.11.0?c/c_.X_nav_.GWguide.BC.vB&c/c_.J_.D.BC.vV&c/c_.J_.D.BC.vV&c/c_.EM_.D.BC.vvgvNCM&' }
 ])
