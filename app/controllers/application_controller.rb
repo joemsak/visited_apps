@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     apps_path
   end
+
+  def current_user
+    @current_user ||= super && User.includes(:apps).find(@current_user.id)
+  end
 end
