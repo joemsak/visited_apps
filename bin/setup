@@ -1,0 +1,40 @@
+#!/bin/sh
+echo "Updating homebrew and installing dependencies..."
+brew update
+brew install qt
+
+echo ""
+echo ""
+echo ""
+echo ""
+echo "Updating rubygems..."
+gem update --system
+
+echo ""
+echo ""
+echo ""
+echo ""
+echo "Updating RVM and rubies..."
+rvm get stable
+rvm install 2.1.5
+rvm reload
+
+echo ""
+echo ""
+echo ""
+echo ""
+echo "Bundling..."
+bundle
+
+echo ""
+echo ""
+echo ""
+echo ""
+echo "Setting up the database and seeds..."
+rake db:create:all db:migrate db:seed
+
+echo ""
+echo ""
+echo ""
+echo ""
+echo "Done! Run 'rails s' for the server or 'rake' for tests!"
