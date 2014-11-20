@@ -5,3 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+App.create([
+  { name: 'Facebook',
+    reference_url: 'https://s-static.ak.facebook.com/rsrc.php/v1/yX/r/HN0ehA1zox_.js' },
+  { name: 'Google Plus',
+    reference_url: 'https://ssl.gstatic.com/gb/js/abc/gcm_57b1882492d4d0138a0a7ea7240394ca.js' },
+  { name: 'MySpace',
+    reference_url: 'http://x.myspacecdn.com/modules/common/static/css/futuraglobal_kqj36l0b.css' },
+  { name: 'Hulu',
+   reference_url: 'http://static.huluim.com/system/hulu_0cd8f497_1.css' },
+ { name: 'Flickr',
+   reference_url: 'http://l.yimg.com/g/css/c_fold_main.css.v109886.64777.105425.23' }
+])
